@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ name }}</title>
+</head>
+<body>
+{% if name == "Kumamoto" %}
+    <h1>きみはオーナーだね</h1>
+{% elif name %}
+    <h1>きみはゲストの{{ name }}さんだね</h1>
+{% else %}
+    <h1>ななしさんだね</h1>
+{% endif %}
+<form action="/adv" method="POST">
+    <p><label>名前を更新する:<input name="name" type="text"></label></p>
+    <p><input type="submit" value="更新！">
+</form>
+<p>advance.htmlのページです</p>
+</body>
+</html>
